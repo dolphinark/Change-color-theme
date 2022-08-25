@@ -1,23 +1,18 @@
-import Button from "./Button";
+import { useState } from "react";
+import Card from "./components/Card";
 
 function App() {
-  
-  const blackBtn = {backgroundColor:"#424246",color:"white"}
-  const blueBtn =  {backgroundColor:"#1d499b",color:"white"}
-  const yellowBtn =  {backgroundColor:"#f9d648",color:"#424246"}
+  const [textColor, setTextColor] = useState("#424246");
+  const [bgColor, setBgColor] = useState("white");
+
+  function theme(textColor, bgColor) {
+    setTextColor(textColor);
+    setBgColor(bgColor);
+  }
 
   return (
-    <div className="container">
-      <h1>Your Life is Your Message</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar sed
-        elementum egestas blandit. Proin augue lacus, phasellus vel lorem risus.
-      </p>
-      <div className="btn-container">
-        <Button color={blackBtn} text="Black" />
-        <Button color={blueBtn} text="Blue" />
-        <Button color={yellowBtn} text="Yellow" />
-      </div>
+    <div>
+      <Card textColor={textColor} bgColor={bgColor} theme={theme}/>
     </div>
   );
 }

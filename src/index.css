@@ -23,14 +23,14 @@ body {
 h1 {
   margin-bottom: 20px;
   caret-color: transparent;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   font-weight: 400;
   color: #424246;
 }
 
 p {
   caret-color: transparent;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #424246;
 }
@@ -48,4 +48,5 @@ p {
   margin: 25px 10px 20px 0px;
   font-family: sans-serif;
   font-size: 0.9rem;
+  outline: none;
 }
